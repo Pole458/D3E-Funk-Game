@@ -1975,13 +1975,13 @@ var tempI64;
 // === Body ===
 
 var ASM_CONSTS = {
-  3508892: function() {Module['emscripten_get_now_backup'] = performance.now;},  
- 3508947: function($0) {performance.now = function() { return $0; };},  
- 3508995: function($0) {performance.now = function() { return $0; };},  
- 3509043: function() {performance.now = Module['emscripten_get_now_backup'];},  
- 3509098: function() {return Module.webglContextAttributes.premultipliedAlpha;},  
- 3509159: function() {return Module.webglContextAttributes.preserveDrawingBuffer;},  
- 3509223: function() {return Module.webglContextAttributes.powerPreference;}
+  3508908: function() {Module['emscripten_get_now_backup'] = performance.now;},  
+ 3508963: function($0) {performance.now = function() { return $0; };},  
+ 3509011: function($0) {performance.now = function() { return $0; };},  
+ 3509059: function() {performance.now = Module['emscripten_get_now_backup'];},  
+ 3509114: function() {return Module.webglContextAttributes.premultipliedAlpha;},  
+ 3509175: function() {return Module.webglContextAttributes.preserveDrawingBuffer;},  
+ 3509239: function() {return Module.webglContextAttributes.powerPreference;}
 };
 
 
@@ -15292,6 +15292,7 @@ var asmLibraryArg = {
   "invoke_viii": invoke_viii,
   "invoke_viiifi": invoke_viiifi,
   "invoke_viiifii": invoke_viiifii,
+  "invoke_viiifiii": invoke_viiifiii,
   "invoke_viiii": invoke_viiii,
   "invoke_viiiifi": invoke_viiiifi,
   "invoke_viiiii": invoke_viiiii,
@@ -15696,6 +15697,9 @@ var dynCall_viifiii = Module["dynCall_viifiii"] = createExportWrapper("dynCall_v
 var dynCall_viiffii = Module["dynCall_viiffii"] = createExportWrapper("dynCall_viiffii");
 
 /** @type {function(...*):?} */
+var dynCall_viiifiii = Module["dynCall_viiifiii"] = createExportWrapper("dynCall_viiifiii");
+
+/** @type {function(...*):?} */
 var dynCall_viiffiii = Module["dynCall_viiffiii"] = createExportWrapper("dynCall_viiffiii");
 
 /** @type {function(...*):?} */
@@ -15703,9 +15707,6 @@ var dynCall_ffffii = Module["dynCall_ffffii"] = createExportWrapper("dynCall_fff
 
 /** @type {function(...*):?} */
 var dynCall_viiiffii = Module["dynCall_viiiffii"] = createExportWrapper("dynCall_viiiffii");
-
-/** @type {function(...*):?} */
-var dynCall_viiifiii = Module["dynCall_viiifiii"] = createExportWrapper("dynCall_viiifiii");
 
 /** @type {function(...*):?} */
 var dynCall_iffi = Module["dynCall_iffi"] = createExportWrapper("dynCall_iffi");
@@ -17416,6 +17417,17 @@ function invoke_viiffii(index,a1,a2,a3,a4,a5,a6) {
   var sp = stackSave();
   try {
     dynCall_viiffii(index,a1,a2,a3,a4,a5,a6);
+  } catch(e) {
+    stackRestore(sp);
+    if (e !== e+0) throw e;
+    _setThrew(1, 0);
+  }
+}
+
+function invoke_viiifiii(index,a1,a2,a3,a4,a5,a6,a7) {
+  var sp = stackSave();
+  try {
+    dynCall_viiifiii(index,a1,a2,a3,a4,a5,a6,a7);
   } catch(e) {
     stackRestore(sp);
     if (e !== e+0) throw e;
